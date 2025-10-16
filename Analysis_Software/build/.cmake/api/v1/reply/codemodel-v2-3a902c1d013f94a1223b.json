@@ -1,0 +1,69 @@
+{
+	"configurations" : 
+	[
+		{
+			"directories" : 
+			[
+				{
+					"build" : ".",
+					"jsonFile" : "directory-.-Debug-f5ebdc15457944623624.json",
+					"minimumCMakeVersion" : 
+					{
+						"string" : "3.10"
+					},
+					"projectIndex" : 0,
+					"source" : ".",
+					"targetIndexes" : 
+					[
+						0,
+						1
+					]
+				}
+			],
+			"name" : "Debug",
+			"projects" : 
+			[
+				{
+					"directoryIndexes" : 
+					[
+						0
+					],
+					"name" : "RootAnalyzer",
+					"targetIndexes" : 
+					[
+						0,
+						1
+					]
+				}
+			],
+			"targets" : 
+			[
+				{
+					"directoryIndex" : 0,
+					"id" : "G__RootAnalyzer::@6890427a1f51a3e7e1df",
+					"jsonFile" : "target-G__RootAnalyzer-Debug-fe78676ab77af4726b7a.json",
+					"name" : "G__RootAnalyzer",
+					"projectIndex" : 0
+				},
+				{
+					"directoryIndex" : 0,
+					"id" : "RootAnalyzer::@6890427a1f51a3e7e1df",
+					"jsonFile" : "target-RootAnalyzer-Debug-d90037df0cc82a8cdde5.json",
+					"name" : "RootAnalyzer",
+					"projectIndex" : 0
+				}
+			]
+		}
+	],
+	"kind" : "codemodel",
+	"paths" : 
+	{
+		"build" : "/home/lasitha/Root_projects/root-on-vscode/Analysis_Software/build",
+		"source" : "/home/lasitha/Root_projects/root-on-vscode/Analysis_Software"
+	},
+	"version" : 
+	{
+		"major" : 2,
+		"minor" : 6
+	}
+}

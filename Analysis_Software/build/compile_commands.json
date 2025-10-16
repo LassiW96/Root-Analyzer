@@ -1,0 +1,14 @@
+[
+{
+  "directory": "/home/lasitha/Root_projects/root-on-vscode/Analysis_Software/build",
+  "command": "/usr/bin/g++ -DRootAnalyzer_EXPORTS -I/home/lasitha/root/install/include -I/home/lasitha/Root_projects/root-on-vscode/Analysis_Software/include   -pipe -fsigned-char -pthread -g -std=gnu++17 -fPIC -o CMakeFiles/RootAnalyzer.dir/src/RootAnalyzer.cpp.o -c /home/lasitha/Root_projects/root-on-vscode/Analysis_Software/src/RootAnalyzer.cpp",
+  "file": "/home/lasitha/Root_projects/root-on-vscode/Analysis_Software/src/RootAnalyzer.cpp",
+  "output": "CMakeFiles/RootAnalyzer.dir/src/RootAnalyzer.cpp.o"
+},
+{
+  "directory": "/home/lasitha/Root_projects/root-on-vscode/Analysis_Software/build",
+  "command": "/usr/bin/g++ -DRootAnalyzer_EXPORTS -I/home/lasitha/root/install/include -I/home/lasitha/Root_projects/root-on-vscode/Analysis_Software/include   -pipe -fsigned-char -pthread -g -std=gnu++17 -fPIC -o CMakeFiles/RootAnalyzer.dir/G__RootAnalyzer.cxx.o -c /home/lasitha/Root_projects/root-on-vscode/Analysis_Software/build/G__RootAnalyzer.cxx",
+  "file": "/home/lasitha/Root_projects/root-on-vscode/Analysis_Software/build/G__RootAnalyzer.cxx",
+  "output": "CMakeFiles/RootAnalyzer.dir/G__RootAnalyzer.cxx.o"
+}
+]

@@ -1,0 +1,20 @@
+==== Some notes about setting up vscode debugger ====
+
+There should be 4 json files
+    - launch
+        * Define how the debugger runs
+    - settings
+        * Define headers and workspace
+    - c_cpp_properties
+    - task
+        * How to build
+    - For root files visuliser add that root-on-vscode
+
+    - Use files in ~/Root_projects/root-on-vscode/Analysis_Software/.vscode
+      as examples
+
+Use CMake to build - just trust me
+    - CMake extension and c/c++ extention needs to be installed
+
+Build by - ctrl+shift+B
+Debug - F5

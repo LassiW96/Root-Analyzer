@@ -1,0 +1,4 @@
+/home/lasitha/Root_projects/root-on-vscode/Analysis_Software/build/CMakeFiles/G__RootAnalyzer.dir
+/home/lasitha/Root_projects/root-on-vscode/Analysis_Software/build/CMakeFiles/RootAnalyzer.dir
+/home/lasitha/Root_projects/root-on-vscode/Analysis_Software/build/CMakeFiles/edit_cache.dir
+/home/lasitha/Root_projects/root-on-vscode/Analysis_Software/build/CMakeFiles/rebuild_cache.dir

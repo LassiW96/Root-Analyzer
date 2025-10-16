@@ -1,0 +1,4 @@
+[ libRootAnalyzer.so ]
+# List of selected classes
+class RootAnalyzer
+header RootAnalyzer.h
