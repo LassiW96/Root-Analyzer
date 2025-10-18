@@ -48,6 +48,8 @@ public:
     // Waveform plotting functions
     void PromtAndPlot();
 
+    void PromptUser();
+
 private:
     TFile* file = nullptr;
     TTree* tree = nullptr;

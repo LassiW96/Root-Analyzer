@@ -32,7 +32,7 @@ RootAnalyzer::~RootAnalyzer() {
 bool RootAnalyzer::OpenFile()
 {
     while (true) {
-        std::string fname = "Tree_1101.root";
+        std::string fname = "pion_det_fadc_replayed_177_seg0_1.root";
         // std::cout << "Enter the file name: ";
         // std::cin >> fname;
 
@@ -96,7 +96,7 @@ bool RootAnalyzer::AccessTree()
     }
 
     while (true) {
-        std::string treename = "t1";
+        std::string treename = "T";
         // std::cout << "What's the name of the tree you want to access: ";
         // std::cin >> treename;
 
@@ -126,7 +126,7 @@ bool RootAnalyzer::SetupBranches()
         return false;
     }
 
-    std::string input = "ch1";
+    std::string input = "moller.scint.samps";
     // std::cout << "Enter branch names to load separated by commas: ";
     // std::getline(std::cin >> std::ws, input);
 
@@ -300,4 +300,11 @@ void RootAnalyzer::PromtAndPlot()
     std::cout << "\nPlotting " << branch << " for " << nEvents <<" events\n"
               << "=====================================================\n"; 
     PlotSamples(branch, nEvents);
+}
+
+// Prompt user for plots
+////////////////////////////////////////////////////////////////////////////////////
+void RootAnalyzer::PromptUser()
+{
+    
 }
