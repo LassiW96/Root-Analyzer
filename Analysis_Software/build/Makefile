@@ -117,61 +117,85 @@ depend:
 .PHONY : depend
 
 #=============================================================================
-# Target rules for targets named G__FileHandler
+# Target rules for targets named G__AnalysisSoftware
 
 # Build rule for target.
-G__FileHandler: cmake_check_build_system
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/Makefile2 G__FileHandler
-.PHONY : G__FileHandler
+G__AnalysisSoftware: cmake_check_build_system
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/Makefile2 G__AnalysisSoftware
+.PHONY : G__AnalysisSoftware
 
 # fast build rule for target.
-G__FileHandler/fast:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/G__FileHandler.dir/build.make CMakeFiles/G__FileHandler.dir/build
-.PHONY : G__FileHandler/fast
+G__AnalysisSoftware/fast:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/G__AnalysisSoftware.dir/build.make CMakeFiles/G__AnalysisSoftware.dir/build
+.PHONY : G__AnalysisSoftware/fast
 
 #=============================================================================
-# Target rules for targets named FileHandler
+# Target rules for targets named AnalysisSoftware
 
 # Build rule for target.
-FileHandler: cmake_check_build_system
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/Makefile2 FileHandler
-.PHONY : FileHandler
+AnalysisSoftware: cmake_check_build_system
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/Makefile2 AnalysisSoftware
+.PHONY : AnalysisSoftware
 
 # fast build rule for target.
-FileHandler/fast:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/FileHandler.dir/build.make CMakeFiles/FileHandler.dir/build
-.PHONY : FileHandler/fast
+AnalysisSoftware/fast:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/AnalysisSoftware.dir/build.make CMakeFiles/AnalysisSoftware.dir/build
+.PHONY : AnalysisSoftware/fast
 
-G__FileHandler.o: G__FileHandler.cxx.o
-.PHONY : G__FileHandler.o
+G__AnalysisSoftware.o: G__AnalysisSoftware.cxx.o
+.PHONY : G__AnalysisSoftware.o
 
 # target to build an object file
-G__FileHandler.cxx.o:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/FileHandler.dir/build.make CMakeFiles/FileHandler.dir/G__FileHandler.cxx.o
-.PHONY : G__FileHandler.cxx.o
+G__AnalysisSoftware.cxx.o:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/AnalysisSoftware.dir/build.make CMakeFiles/AnalysisSoftware.dir/G__AnalysisSoftware.cxx.o
+.PHONY : G__AnalysisSoftware.cxx.o
 
-G__FileHandler.i: G__FileHandler.cxx.i
-.PHONY : G__FileHandler.i
+G__AnalysisSoftware.i: G__AnalysisSoftware.cxx.i
+.PHONY : G__AnalysisSoftware.i
 
 # target to preprocess a source file
-G__FileHandler.cxx.i:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/FileHandler.dir/build.make CMakeFiles/FileHandler.dir/G__FileHandler.cxx.i
-.PHONY : G__FileHandler.cxx.i
+G__AnalysisSoftware.cxx.i:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/AnalysisSoftware.dir/build.make CMakeFiles/AnalysisSoftware.dir/G__AnalysisSoftware.cxx.i
+.PHONY : G__AnalysisSoftware.cxx.i
 
-G__FileHandler.s: G__FileHandler.cxx.s
-.PHONY : G__FileHandler.s
+G__AnalysisSoftware.s: G__AnalysisSoftware.cxx.s
+.PHONY : G__AnalysisSoftware.s
 
 # target to generate assembly for a file
-G__FileHandler.cxx.s:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/FileHandler.dir/build.make CMakeFiles/FileHandler.dir/G__FileHandler.cxx.s
-.PHONY : G__FileHandler.cxx.s
+G__AnalysisSoftware.cxx.s:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/AnalysisSoftware.dir/build.make CMakeFiles/AnalysisSoftware.dir/G__AnalysisSoftware.cxx.s
+.PHONY : G__AnalysisSoftware.cxx.s
+
+src/AnalysisManager.o: src/AnalysisManager.cpp.o
+.PHONY : src/AnalysisManager.o
+
+# target to build an object file
+src/AnalysisManager.cpp.o:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/AnalysisSoftware.dir/build.make CMakeFiles/AnalysisSoftware.dir/src/AnalysisManager.cpp.o
+.PHONY : src/AnalysisManager.cpp.o
+
+src/AnalysisManager.i: src/AnalysisManager.cpp.i
+.PHONY : src/AnalysisManager.i
+
+# target to preprocess a source file
+src/AnalysisManager.cpp.i:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/AnalysisSoftware.dir/build.make CMakeFiles/AnalysisSoftware.dir/src/AnalysisManager.cpp.i
+.PHONY : src/AnalysisManager.cpp.i
+
+src/AnalysisManager.s: src/AnalysisManager.cpp.s
+.PHONY : src/AnalysisManager.s
+
+# target to generate assembly for a file
+src/AnalysisManager.cpp.s:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/AnalysisSoftware.dir/build.make CMakeFiles/AnalysisSoftware.dir/src/AnalysisManager.cpp.s
+.PHONY : src/AnalysisManager.cpp.s
 
 src/FileHandler.o: src/FileHandler.cpp.o
 .PHONY : src/FileHandler.o
 
 # target to build an object file
 src/FileHandler.cpp.o:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/FileHandler.dir/build.make CMakeFiles/FileHandler.dir/src/FileHandler.cpp.o
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/AnalysisSoftware.dir/build.make CMakeFiles/AnalysisSoftware.dir/src/FileHandler.cpp.o
 .PHONY : src/FileHandler.cpp.o
 
 src/FileHandler.i: src/FileHandler.cpp.i
@@ -179,7 +203,7 @@ src/FileHandler.i: src/FileHandler.cpp.i
 
 # target to preprocess a source file
 src/FileHandler.cpp.i:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/FileHandler.dir/build.make CMakeFiles/FileHandler.dir/src/FileHandler.cpp.i
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/AnalysisSoftware.dir/build.make CMakeFiles/AnalysisSoftware.dir/src/FileHandler.cpp.i
 .PHONY : src/FileHandler.cpp.i
 
 src/FileHandler.s: src/FileHandler.cpp.s
@@ -187,8 +211,32 @@ src/FileHandler.s: src/FileHandler.cpp.s
 
 # target to generate assembly for a file
 src/FileHandler.cpp.s:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/FileHandler.dir/build.make CMakeFiles/FileHandler.dir/src/FileHandler.cpp.s
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/AnalysisSoftware.dir/build.make CMakeFiles/AnalysisSoftware.dir/src/FileHandler.cpp.s
 .PHONY : src/FileHandler.cpp.s
+
+src/GeneratePlots.o: src/GeneratePlots.cpp.o
+.PHONY : src/GeneratePlots.o
+
+# target to build an object file
+src/GeneratePlots.cpp.o:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/AnalysisSoftware.dir/build.make CMakeFiles/AnalysisSoftware.dir/src/GeneratePlots.cpp.o
+.PHONY : src/GeneratePlots.cpp.o
+
+src/GeneratePlots.i: src/GeneratePlots.cpp.i
+.PHONY : src/GeneratePlots.i
+
+# target to preprocess a source file
+src/GeneratePlots.cpp.i:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/AnalysisSoftware.dir/build.make CMakeFiles/AnalysisSoftware.dir/src/GeneratePlots.cpp.i
+.PHONY : src/GeneratePlots.cpp.i
+
+src/GeneratePlots.s: src/GeneratePlots.cpp.s
+.PHONY : src/GeneratePlots.s
+
+# target to generate assembly for a file
+src/GeneratePlots.cpp.s:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/AnalysisSoftware.dir/build.make CMakeFiles/AnalysisSoftware.dir/src/GeneratePlots.cpp.s
+.PHONY : src/GeneratePlots.cpp.s
 
 # Help Target
 help:
@@ -198,14 +246,20 @@ help:
 	@echo "... depend"
 	@echo "... edit_cache"
 	@echo "... rebuild_cache"
-	@echo "... G__FileHandler"
-	@echo "... FileHandler"
-	@echo "... G__FileHandler.o"
-	@echo "... G__FileHandler.i"
-	@echo "... G__FileHandler.s"
+	@echo "... G__AnalysisSoftware"
+	@echo "... AnalysisSoftware"
+	@echo "... G__AnalysisSoftware.o"
+	@echo "... G__AnalysisSoftware.i"
+	@echo "... G__AnalysisSoftware.s"
+	@echo "... src/AnalysisManager.o"
+	@echo "... src/AnalysisManager.i"
+	@echo "... src/AnalysisManager.s"
 	@echo "... src/FileHandler.o"
 	@echo "... src/FileHandler.i"
 	@echo "... src/FileHandler.s"
+	@echo "... src/GeneratePlots.o"
+	@echo "... src/GeneratePlots.i"
+	@echo "... src/GeneratePlots.s"
 .PHONY : help
 
 

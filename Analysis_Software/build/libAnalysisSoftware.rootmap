@@ -1,0 +1,8 @@
+[ libAnalysisSoftware.so ]
+# List of selected classes
+class AnalysisManager
+class FileHandler
+class GeneratePlots
+header AnalysisManager.h
+header FileHandler.h
+header GeneratePlots.h

@@ -1,4 +1,0 @@
-[ libFileHandler.so ]
-# List of selected classes
-class FileHandler
-header FileHandler.h
