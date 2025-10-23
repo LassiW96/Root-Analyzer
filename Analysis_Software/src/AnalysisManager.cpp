@@ -7,7 +7,7 @@
 
 AnalysisManager::AnalysisManager() 
 {
-    analyzer = std::make_unique<RootAnalyzer>();
+    analyzer = std::make_unique<FileHandler>();
 }
 
 void AnalysisManager::Start()
@@ -16,15 +16,18 @@ void AnalysisManager::Start()
     std::string filename = PromptFilename();    // Prompt for the filename
 
     if (!filename.empty()) {
-        if (analyzer->OpenFile()) {
-            fileLoaded = true;
-            std::cout << "\nFile loaded successfully.\n";
-        }
+        fileLoaded = analyzer->OpenFile(filename);
+        // File content will be printed through OpenFile
+        std::cout << "\nFile loaded successfully!\n";
     }
 
     else {
-        std::cerr << "\nFailed to load the file " << filename << std::endl;
+        std::cerr << "\nFilename is empy!\n";
         return;
+    }
+
+    if (fileLoaded = true) {
+
     }
 }
 
@@ -52,4 +55,55 @@ std::string AnalysisManager::PromptFilename() const
     }
 
     return filename;
+}
+
+// Tree and branch setup
+//////////////////////////////////////////////////////////////////////////////
+void AnalysisManager::BranchSetup()
+{
+    std::string treename;
+    std::cout << "\nEnter the tree name to load:";
+    std::cin >> treename;
+
+    treeOpen = analyzer->AccessTree(treename);
+
+    if (treeOpen == true) {
+        std::string input;
+        std::cout << "Enter branch names to load separated by commas: ";
+        std::getline(std::cin >> std::ws, input);
+    
+        // Stringstream object to manipulate string input
+        std::stringstream ss(input);
+        std::string branchName;
+    }
+}
+
+
+// Prompt the user for analysis type
+//////////////////////////////////////////////////////////////////////////////
+void AnalysisManager::PromptUser()
+{
+    Int_t choice = 0;
+
+    while (true) {
+        std::cout << "\nEnter the choice of analysis from the above list."
+                  << "Type 5 to exit.";
+        std::cin >> choice;
+
+        if (std::cin.fail()) {
+            std::cin.clear();
+            std::cin.ignore(256, ',');
+            std::cerr << "\nInvalid input. Please enter a number between 1 & 5!\n";
+            continue;
+        }
+
+        switch (choice)
+        {
+        case 1:
+            break;
+        
+        default:
+            break;
+        }
+    }
 }

@@ -7,7 +7,7 @@
 // branch opening
 # include <sstream>
 
-# include "RootAnalyzer.h"
+# include "FileHandler.h"
 
 # include "TFile.h"
 # include "TKey.h"
@@ -18,9 +18,9 @@
 # include "TCanvas.h"
 # include "TSpline.h"
 
-RootAnalyzer::RootAnalyzer() : file(nullptr), tree(nullptr) {}
+FileHandler::FileHandler() : file(nullptr), tree(nullptr) {}
 
-RootAnalyzer::~RootAnalyzer() {
+FileHandler::~FileHandler() {
     if (file) {
         file->Close();
         delete file;
@@ -29,23 +29,20 @@ RootAnalyzer::~RootAnalyzer() {
 
 // File opening
 /////////////////////////////////////////////////////////////////////////
-bool RootAnalyzer::OpenFile()
+bool FileHandler::OpenFile(std::string& filename)
 {
     while (true) {
-        std::string fname = "pion_det_fadc_replayed_177_seg0_1.root";
-        // std::cout << "Enter the file name: ";
-        // std::cin >> fname;
+        file = TFile::Open(filename.c_str(), "READ");    
 
-        file = TFile::Open(fname.c_str(), "READ");    
-
-        if (file || !file->IsZombie()) {
-            std::cout << "\nFile " << fname << " opened successfully!" << std::endl;
+        if (file && !file->IsZombie()) {
+            std::cout << "\nFile " << filename << " opened successfully!" 
+                      << std::endl;
             PrintFilecontent();
             break;
         }
 
         else {
-            std::cerr << "Error: Couldn't open the file " << fname 
+            std::cerr << "Error: Couldn't open the file " << filename 
                       << "\nCheck the file name" << std::endl;
         }
     }
@@ -55,7 +52,7 @@ bool RootAnalyzer::OpenFile()
 
 // Print file info
 /////////////////////////////////////////////////////////////////////////
-void RootAnalyzer::PrintFilecontent() const
+void FileHandler::PrintFilecontent() const
 {
     if (!file) {
         std::cerr << "Error: There's no file" << std::endl;
@@ -87,7 +84,7 @@ void RootAnalyzer::PrintFilecontent() const
 
 // Tree opening
 /////////////////////////////////////////////////////////////////////////
-bool RootAnalyzer::AccessTree()
+bool FileHandler::AccessTree(std::string& treename)
 {
     if (!file) {
         std::cerr << "Error: There's no file open, call OpenFile() first!"
@@ -96,20 +93,16 @@ bool RootAnalyzer::AccessTree()
     }
 
     while (true) {
-        std::string treename = "T";
-        // std::cout << "What's the name of the tree you want to access: ";
-        // std::cin >> treename;
-
         tree = dynamic_cast<TTree*>(file->Get(treename.c_str()));
 
         if (!tree) {
             std::cerr << "Error: No such tree in the file " << file->GetName() 
-                    << "\nCheck the tree name again" << std::endl;
+                      << "\nCheck the tree name again" << std::endl;
         }
 
         else {
-        std::cout << "Tree " << treename << " opened successfully!" 
-                  << "\n=========================================" << std::endl;
+            std::cout << "Tree " << treename << " opened successfully!" 
+                      << "\n=========================================\n";
             break;
         }
     }
@@ -118,21 +111,13 @@ bool RootAnalyzer::AccessTree()
 
 // Setup branches
 /////////////////////////////////////////////////////////////////////////////
-bool RootAnalyzer::SetupBranches() 
+bool FileHandler::SetupBranches(std::stringstream& ss, std::string& branchName) 
 {
     if (!tree) {
         std::cerr << "Error: No tree specified, call AccessTree() first!"
                   << std::endl;
         return false;
     }
-
-    std::string input = "moller.scint.samps";
-    // std::cout << "Enter branch names to load separated by commas: ";
-    // std::getline(std::cin >> std::ws, input);
-
-    // Stringstream object to manipulate string input
-    std::stringstream ss(input);
-    std::string branchName;
 
     // Read a line from ss
     while(std::getline(ss, branchName, ',')) {
@@ -227,84 +212,4 @@ bool RootAnalyzer::SetupBranches()
     std::cout << "===============================================\n" 
               << std::endl;
     return true;
-}
-
-// Plotting functions
-//____________________________________________________________________________
-// Samples plotting (Eg: Waveforms)
-//////////////////////////////////////////////////////////////////////////////
-void RootAnalyzer::PlotSamples(const std::string& branch, int nEvents)
-{
-    auto it = branchData.find(branch);
-    const BranchData& arr = it->second;
-    std::cout << "\nBuffer name: " << arr.name 
-              << " type: " << arr.type << std::endl;
-
-    for (int i = 0; i < nEvents; i++) {
-        if (arr.bufferD.empty() && arr.bufferF.empty()) {
-            std::cerr << "Error: Empty buffer!\n";
-            return;
-        }
-
-        TGraph *graph1 = new TGraph();
-        for (int j = 0; j < arr.ndata; j++) {
-            graph1->SetPoint(graph1->GetN(), j, arr.bufferD[j]);
-        }    
-
-        // Drawing
-        TCanvas *c = new TCanvas(Form("c%d", i), Form("Event%i", i), 800, 600);
-        
-        graph1->SetMarkerStyle(20);
-        graph1->SetMarkerColor(kRed);
-        graph1->SetMarkerSize(0.8);
-
-        graph1->SetTitle(Form("Waveform for Event %d;Sample Index;ADC Counts", i));
-        graph1->Draw("AP");
-
-        // Splines fit
-        TSpline3 *spline1 = new TSpline3("spline1", graph1);
-
-        spline1->SetLineColor(kRed);
-        spline1->Draw("SAME");
-    }
-}
-
-// Prompting the number of events from the user and plot
-///////////////////////////////////////////////////////////////////////////////
-void RootAnalyzer::PromtAndPlot()
-{
-    if (!tree) {
-        std::cerr << "Error: No tree opened!" << std::endl;
-        return;
-    }
-
-    std::cout << "Available branches:\n";
-    for (int i = 0; i < connectedBranches.size(); i++) {
-        std::cout << " [" << i << "] " << connectedBranches[i] << std::endl;
-    }
-
-    int branchIdx = 0;
-    // std::cout << "Select the branch idx to plot: ";
-    // std::cin >> branchIdx;
-
-    if (branchIdx < 0 || branchIdx > (int)connectedBranches.size()) {
-        std::cerr << "Error: Invalid branch index!" << std::endl;
-        return;
-    }
-
-    std::string branch = connectedBranches[branchIdx];
-
-    int nEvents = 2;
-    // std::cout << "Enter the number of events to plot: ";
-    // std::cin >> nEvents;
-    std::cout << "\nPlotting " << branch << " for " << nEvents <<" events\n"
-              << "=====================================================\n"; 
-    PlotSamples(branch, nEvents);
-}
-
-// Prompt user for plots
-////////////////////////////////////////////////////////////////////////////////////
-void RootAnalyzer::PromptUser()
-{
-    
 }
