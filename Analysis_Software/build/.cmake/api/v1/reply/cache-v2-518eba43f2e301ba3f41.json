@@ -863,7 +863,7 @@
 				}
 			],
 			"type" : "STATIC",
-			"value" : "RootAnalyzer"
+			"value" : "FileHandler"
 		},
 		{
 			"name" : "CMAKE_RANLIB",
@@ -1690,7 +1690,7 @@
 			"value" : "/home/lasitha/root/install/bin/rootrm"
 		},
 		{
-			"name" : "RootAnalyzer_BINARY_DIR",
+			"name" : "FileHandler_BINARY_DIR",
 			"properties" : 
 			[
 				{
@@ -1702,7 +1702,7 @@
 			"value" : "/home/lasitha/Root_projects/root-on-vscode/Analysis_Software/build"
 		},
 		{
-			"name" : "RootAnalyzer_IS_TOP_LEVEL",
+			"name" : "FileHandler_IS_TOP_LEVEL",
 			"properties" : 
 			[
 				{
@@ -1714,7 +1714,7 @@
 			"value" : "ON"
 		},
 		{
-			"name" : "RootAnalyzer_LIB_DEPENDS",
+			"name" : "FileHandler_LIB_DEPENDS",
 			"properties" : 
 			[
 				{
@@ -1726,7 +1726,7 @@
 			"value" : "general;/home/lasitha/root/install/lib/libCore.so;general;/home/lasitha/root/install/lib/libImt.so;general;/home/lasitha/root/install/lib/libRIO.so;general;/home/lasitha/root/install/lib/libNet.so;general;/home/lasitha/root/install/lib/libHist.so;general;/home/lasitha/root/install/lib/libGraf.so;general;/home/lasitha/root/install/lib/libGraf3d.so;general;/home/lasitha/root/install/lib/libGpad.so;general;/home/lasitha/root/install/lib/libROOTDataFrame.so;general;/home/lasitha/root/install/lib/libTree.so;general;/home/lasitha/root/install/lib/libTreePlayer.so;general;/home/lasitha/root/install/lib/libRint.so;general;/home/lasitha/root/install/lib/libPostscript.so;general;/home/lasitha/root/install/lib/libMatrix.so;general;/home/lasitha/root/install/lib/libPhysics.so;general;/home/lasitha/root/install/lib/libMathCore.so;general;/home/lasitha/root/install/lib/libThread.so;general;/home/lasitha/root/install/lib/libMultiProc.so;general;/home/lasitha/root/install/lib/libROOTVecOps.so;"
 		},
 		{
-			"name" : "RootAnalyzer_SOURCE_DIR",
+			"name" : "FileHandler_SOURCE_DIR",
 			"properties" : 
 			[
 				{

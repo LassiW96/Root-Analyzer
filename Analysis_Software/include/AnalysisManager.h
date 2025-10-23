@@ -11,8 +11,10 @@
 # include <iostream>
 # include <string>
 # include <memory>
+# include <sstream>
 
-# include "RootAnalyzer.h"
+# include "FileHandler.h"
+# include "GeneratePlots.h"
 
 class AnalysisManager{
 public:
@@ -26,11 +28,15 @@ private:
     // Workflow functions
     void WelcomeHeader() const;
     std::string PromptFilename() const;
+    void BranchSetup();
+    void PromptUser();          // Prompt user for analysis type
 
     // Data memebers
     //bool running = true;
-    std::unique_ptr<RootAnalyzer> analyzer;
+    std::unique_ptr<FileHandler> analyzer;
     bool fileLoaded = false;
+    bool treeOpen = false;
+    bool branchSetup = false;
 };
 
 # endif

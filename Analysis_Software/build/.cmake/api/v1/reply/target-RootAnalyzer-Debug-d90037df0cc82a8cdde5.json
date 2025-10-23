@@ -2,7 +2,7 @@
 	"artifacts" : 
 	[
 		{
-			"path" : "lib/libRootAnalyzer.so"
+			"path" : "lib/libFileHandler.so"
 		}
 	],
 	"backtrace" : 1,
@@ -80,7 +80,7 @@
 			"defines" : 
 			[
 				{
-					"define" : "RootAnalyzer_EXPORTS"
+					"define" : "FileHandler_EXPORTS"
 				}
 			],
 			"includes" : 
@@ -110,7 +110,7 @@
 			]
 		}
 	],
-	"id" : "RootAnalyzer::@6890427a1f51a3e7e1df",
+	"id" : "FileHandler::@6890427a1f51a3e7e1df",
 	"link" : 
 	{
 		"commandFragments" : 
@@ -226,8 +226,8 @@
 		],
 		"language" : "CXX"
 	},
-	"name" : "RootAnalyzer",
-	"nameOnDisk" : "libRootAnalyzer.so",
+	"name" : "FileHandler",
+	"nameOnDisk" : "libFileHandler.so",
 	"paths" : 
 	{
 		"build" : ".",
@@ -256,20 +256,20 @@
 		{
 			"backtrace" : 1,
 			"compileGroupIndex" : 0,
-			"path" : "src/RootAnalyzer.cpp",
+			"path" : "src/FileHandler.cpp",
 			"sourceGroupIndex" : 0
 		},
 		{
 			"backtrace" : 1,
 			"compileGroupIndex" : 0,
 			"isGenerated" : true,
-			"path" : "build/G__RootAnalyzer.cxx",
+			"path" : "build/G__FileHandler.cxx",
 			"sourceGroupIndex" : 0
 		},
 		{
 			"backtrace" : 0,
 			"isGenerated" : true,
-			"path" : "build/G__RootAnalyzer.cxx.rule",
+			"path" : "build/G__FileHandler.cxx.rule",
 			"sourceGroupIndex" : 1
 		}
 	],

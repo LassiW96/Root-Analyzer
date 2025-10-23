@@ -92,7 +92,7 @@ RunAnalyzer_EXTERNAL_OBJECTS =
 
 bin/RunAnalyzer: CMakeFiles/RunAnalyzer.dir/main.cpp.o
 bin/RunAnalyzer: CMakeFiles/RunAnalyzer.dir/build.make
-bin/RunAnalyzer: lib/libRootAnalyzer.so
+bin/RunAnalyzer: lib/libFileHandler.so
 bin/RunAnalyzer: /home/lasitha/root/install/lib/libCore.so
 bin/RunAnalyzer: /home/lasitha/root/install/lib/libImt.so
 bin/RunAnalyzer: /home/lasitha/root/install/lib/libRIO.so

@@ -58,47 +58,47 @@ CMAKE_SOURCE_DIR = /home/lasitha/Root_projects/root-on-vscode/Analysis_Software
 # The top-level build directory on which CMake was run.
 CMAKE_BINARY_DIR = /home/lasitha/Root_projects/root-on-vscode/Analysis_Software/build
 
-# Utility rule file for G__RootAnalyzer.
+# Utility rule file for G__FileHandler.
 
 # Include any custom commands dependencies for this target.
-include CMakeFiles/G__RootAnalyzer.dir/compiler_depend.make
+include CMakeFiles/G__FileHandler.dir/compiler_depend.make
 
 # Include the progress variables for this target.
-include CMakeFiles/G__RootAnalyzer.dir/progress.make
+include CMakeFiles/G__FileHandler.dir/progress.make
 
-CMakeFiles/G__RootAnalyzer: G__RootAnalyzer.cxx
-CMakeFiles/G__RootAnalyzer: libRootAnalyzer_rdict.pcm
-CMakeFiles/G__RootAnalyzer: libRootAnalyzer.rootmap
+CMakeFiles/G__FileHandler: G__FileHandler.cxx
+CMakeFiles/G__FileHandler: libFileHandler_rdict.pcm
+CMakeFiles/G__FileHandler: libFileHandler.rootmap
 
-G__RootAnalyzer.cxx: /home/lasitha/Root_projects/root-on-vscode/Analysis_Software/include/LinkDef.h
-G__RootAnalyzer.cxx: /home/lasitha/Root_projects/root-on-vscode/Analysis_Software/include/RootAnalyzer.h
-G__RootAnalyzer.cxx: /home/lasitha/Root_projects/root-on-vscode/Analysis_Software/include/RootAnalyzer.h
-G__RootAnalyzer.cxx: /home/lasitha/Root_projects/root-on-vscode/Analysis_Software/include/LinkDef.h
-	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --blue --bold --progress-dir=/home/lasitha/Root_projects/root-on-vscode/Analysis_Software/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_1) "Generating G__RootAnalyzer.cxx, libRootAnalyzer_rdict.pcm, libRootAnalyzer.rootmap"
-	/usr/bin/cmake -E env LD_LIBRARY_PATH=/home/lasitha/root/install/lib:/home/lasitha/JLab-analyzers/moller-counting-install/lib:/home/lasitha/JLab-analyzers/analyzer-1715-install/lib:/home/lasitha/root/install/lib:/home/lasitha/home/lasitha/Hall-A-analyzer/install/lib:: /home/lasitha/root/install/bin/rootcling -v2 -f G__RootAnalyzer.cxx -s /home/lasitha/Root_projects/root-on-vscode/Analysis_Software/build/libRootAnalyzer.so -rml libRootAnalyzer.so -rmf /home/lasitha/Root_projects/root-on-vscode/Analysis_Software/build/libRootAnalyzer.rootmap -compilerI/home/lasitha/home/lasitha/Hall-A-analyzer/install/include -compilerI/usr/include/c++/13 -compilerI/usr/include/x86_64-linux-gnu/c++/13 -compilerI/usr/include/c++/13/backward -compilerI/usr/lib/gcc/x86_64-linux-gnu/13/include -compilerI/usr/local/include -compilerI/usr/include/x86_64-linux-gnu -compilerI/usr/include -I/home/lasitha/root/install/include -I/home/lasitha/Root_projects/root-on-vscode/Analysis_Software/include -I/home/lasitha/Root_projects/root-on-vscode/Analysis_Software /home/lasitha/Root_projects/root-on-vscode/Analysis_Software/include/RootAnalyzer.h /home/lasitha/Root_projects/root-on-vscode/Analysis_Software/include/LinkDef.h
+G__FileHandler.cxx: /home/lasitha/Root_projects/root-on-vscode/Analysis_Software/include/LinkDef.h
+G__FileHandler.cxx: /home/lasitha/Root_projects/root-on-vscode/Analysis_Software/include/FileHandler.h
+G__FileHandler.cxx: /home/lasitha/Root_projects/root-on-vscode/Analysis_Software/include/FileHandler.h
+G__FileHandler.cxx: /home/lasitha/Root_projects/root-on-vscode/Analysis_Software/include/LinkDef.h
+	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --blue --bold --progress-dir=/home/lasitha/Root_projects/root-on-vscode/Analysis_Software/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_1) "Generating G__FileHandler.cxx, libFileHandler_rdict.pcm, libFileHandler.rootmap"
+	/usr/bin/cmake -E env LD_LIBRARY_PATH=/home/lasitha/root/install/lib:/home/lasitha/JLab-analyzers/moller-counting-install/lib:/home/lasitha/JLab-analyzers/analyzer-1715-install/lib:/home/lasitha/root/install/lib:/home/lasitha/home/lasitha/Hall-A-analyzer/install/lib:: /home/lasitha/root/install/bin/rootcling -v2 -f G__FileHandler.cxx -s /home/lasitha/Root_projects/root-on-vscode/Analysis_Software/build/libFileHandler.so -rml libFileHandler.so -rmf /home/lasitha/Root_projects/root-on-vscode/Analysis_Software/build/libFileHandler.rootmap -compilerI/home/lasitha/home/lasitha/Hall-A-analyzer/install/include -compilerI/usr/include/c++/13 -compilerI/usr/include/x86_64-linux-gnu/c++/13 -compilerI/usr/include/c++/13/backward -compilerI/usr/lib/gcc/x86_64-linux-gnu/13/include -compilerI/usr/local/include -compilerI/usr/include/x86_64-linux-gnu -compilerI/usr/include -I/home/lasitha/root/install/include -I/home/lasitha/Root_projects/root-on-vscode/Analysis_Software/include -I/home/lasitha/Root_projects/root-on-vscode/Analysis_Software /home/lasitha/Root_projects/root-on-vscode/Analysis_Software/include/FileHandler.h /home/lasitha/Root_projects/root-on-vscode/Analysis_Software/include/LinkDef.h
 
-libRootAnalyzer_rdict.pcm: G__RootAnalyzer.cxx
-	@$(CMAKE_COMMAND) -E touch_nocreate libRootAnalyzer_rdict.pcm
+libFileHandler_rdict.pcm: G__FileHandler.cxx
+	@$(CMAKE_COMMAND) -E touch_nocreate libFileHandler_rdict.pcm
 
-libRootAnalyzer.rootmap: G__RootAnalyzer.cxx
-	@$(CMAKE_COMMAND) -E touch_nocreate libRootAnalyzer.rootmap
+libFileHandler.rootmap: G__FileHandler.cxx
+	@$(CMAKE_COMMAND) -E touch_nocreate libFileHandler.rootmap
 
-G__RootAnalyzer: CMakeFiles/G__RootAnalyzer
-G__RootAnalyzer: G__RootAnalyzer.cxx
-G__RootAnalyzer: libRootAnalyzer.rootmap
-G__RootAnalyzer: libRootAnalyzer_rdict.pcm
-G__RootAnalyzer: CMakeFiles/G__RootAnalyzer.dir/build.make
-.PHONY : G__RootAnalyzer
+G__FileHandler: CMakeFiles/G__FileHandler
+G__FileHandler: G__FileHandler.cxx
+G__FileHandler: libFileHandler.rootmap
+G__FileHandler: libFileHandler_rdict.pcm
+G__FileHandler: CMakeFiles/G__FileHandler.dir/build.make
+.PHONY : G__FileHandler
 
 # Rule to build all files generated by this target.
-CMakeFiles/G__RootAnalyzer.dir/build: G__RootAnalyzer
-.PHONY : CMakeFiles/G__RootAnalyzer.dir/build
+CMakeFiles/G__FileHandler.dir/build: G__FileHandler
+.PHONY : CMakeFiles/G__FileHandler.dir/build
 
-CMakeFiles/G__RootAnalyzer.dir/clean:
-	$(CMAKE_COMMAND) -P CMakeFiles/G__RootAnalyzer.dir/cmake_clean.cmake
-.PHONY : CMakeFiles/G__RootAnalyzer.dir/clean
+CMakeFiles/G__FileHandler.dir/clean:
+	$(CMAKE_COMMAND) -P CMakeFiles/G__FileHandler.dir/cmake_clean.cmake
+.PHONY : CMakeFiles/G__FileHandler.dir/clean
 
-CMakeFiles/G__RootAnalyzer.dir/depend:
-	cd /home/lasitha/Root_projects/root-on-vscode/Analysis_Software/build && $(CMAKE_COMMAND) -E cmake_depends "Unix Makefiles" /home/lasitha/Root_projects/root-on-vscode/Analysis_Software /home/lasitha/Root_projects/root-on-vscode/Analysis_Software /home/lasitha/Root_projects/root-on-vscode/Analysis_Software/build /home/lasitha/Root_projects/root-on-vscode/Analysis_Software/build /home/lasitha/Root_projects/root-on-vscode/Analysis_Software/build/CMakeFiles/G__RootAnalyzer.dir/DependInfo.cmake "--color=$(COLOR)"
-.PHONY : CMakeFiles/G__RootAnalyzer.dir/depend
+CMakeFiles/G__FileHandler.dir/depend:
+	cd /home/lasitha/Root_projects/root-on-vscode/Analysis_Software/build && $(CMAKE_COMMAND) -E cmake_depends "Unix Makefiles" /home/lasitha/Root_projects/root-on-vscode/Analysis_Software /home/lasitha/Root_projects/root-on-vscode/Analysis_Software /home/lasitha/Root_projects/root-on-vscode/Analysis_Software/build /home/lasitha/Root_projects/root-on-vscode/Analysis_Software/build /home/lasitha/Root_projects/root-on-vscode/Analysis_Software/build/CMakeFiles/G__FileHandler.dir/DependInfo.cmake "--color=$(COLOR)"
+.PHONY : CMakeFiles/G__FileHandler.dir/depend
 

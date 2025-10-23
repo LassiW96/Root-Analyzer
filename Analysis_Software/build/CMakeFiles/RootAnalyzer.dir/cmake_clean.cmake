@@ -1,16 +1,16 @@
 file(REMOVE_RECURSE
-  "CMakeFiles/RootAnalyzer.dir/G__RootAnalyzer.cxx.o"
-  "CMakeFiles/RootAnalyzer.dir/G__RootAnalyzer.cxx.o.d"
-  "CMakeFiles/RootAnalyzer.dir/src/RootAnalyzer.cpp.o"
-  "CMakeFiles/RootAnalyzer.dir/src/RootAnalyzer.cpp.o.d"
-  "G__RootAnalyzer.cxx"
-  "lib/libRootAnalyzer.pdb"
-  "lib/libRootAnalyzer.so"
-  "libRootAnalyzer.rootmap"
-  "libRootAnalyzer_rdict.pcm"
+  "CMakeFiles/FileHandler.dir/G__FileHandler.cxx.o"
+  "CMakeFiles/FileHandler.dir/G__FileHandler.cxx.o.d"
+  "CMakeFiles/FileHandler.dir/src/FileHandler.cpp.o"
+  "CMakeFiles/FileHandler.dir/src/FileHandler.cpp.o.d"
+  "G__FileHandler.cxx"
+  "lib/libFileHandler.pdb"
+  "lib/libFileHandler.so"
+  "libFileHandler.rootmap"
+  "libFileHandler_rdict.pcm"
 )
 
 # Per-language clean rules from dependency scanning.
 foreach(lang CXX)
-  include(CMakeFiles/RootAnalyzer.dir/cmake_clean_${lang}.cmake OPTIONAL)
+  include(CMakeFiles/FileHandler.dir/cmake_clean_${lang}.cmake OPTIONAL)
 endforeach()

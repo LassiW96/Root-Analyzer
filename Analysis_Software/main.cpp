@@ -3,10 +3,10 @@
 //
 //////////////////////////////////////////////////////////////////////
 
-# include "RootAnalyzer.h"
+# include "FileHandler.h"
 
 int main() {
-    RootAnalyzer analyzer;
+    FileHandler analyzer;
 
     analyzer.OpenFile();
 

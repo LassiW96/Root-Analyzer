@@ -28,7 +28,7 @@
 					[
 						0
 					],
-					"name" : "RootAnalyzer",
+					"name" : "FileHandler",
 					"targetIndexes" : 
 					[
 						0,
@@ -40,16 +40,16 @@
 			[
 				{
 					"directoryIndex" : 0,
-					"id" : "G__RootAnalyzer::@6890427a1f51a3e7e1df",
-					"jsonFile" : "target-G__RootAnalyzer-Debug-fe78676ab77af4726b7a.json",
-					"name" : "G__RootAnalyzer",
+					"id" : "G__FileHandler::@6890427a1f51a3e7e1df",
+					"jsonFile" : "target-G__FileHandler-Debug-fe78676ab77af4726b7a.json",
+					"name" : "G__FileHandler",
 					"projectIndex" : 0
 				},
 				{
 					"directoryIndex" : 0,
-					"id" : "RootAnalyzer::@6890427a1f51a3e7e1df",
-					"jsonFile" : "target-RootAnalyzer-Debug-d90037df0cc82a8cdde5.json",
-					"name" : "RootAnalyzer",
+					"id" : "FileHandler::@6890427a1f51a3e7e1df",
+					"jsonFile" : "target-FileHandler-Debug-d90037df0cc82a8cdde5.json",
+					"name" : "FileHandler",
 					"projectIndex" : 0
 				}
 			]

@@ -1,4 +1,4 @@
-[ libRootAnalyzer.so ]
+[ libFileHandler.so ]
 # List of selected classes
-class RootAnalyzer
-header RootAnalyzer.h
+class FileHandler
+header FileHandler.h

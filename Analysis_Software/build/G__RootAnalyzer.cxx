@@ -1,6 +1,6 @@
 // Do NOT change. Changes will be lost next time file is generated
 
-#define R__DICTIONARY_FILENAME G__RootAnalyzer
+#define R__DICTIONARY_FILENAME G__FileHandler
 #define R__NO_DEPRECATION
 
 /*******************************************************************/
@@ -35,7 +35,7 @@
 #include "TDataMember.h"
 
 // Header files passed as explicit arguments
-#include "/home/lasitha/Root_projects/root-on-vscode/Analysis_Software/include/RootAnalyzer.h"
+#include "/home/lasitha/Root_projects/root-on-vscode/Analysis_Software/include/FileHandler.h"
 
 // Header files passed via #pragma extra_include
 
@@ -43,70 +43,70 @@
 namespace std {} using namespace std;
 
 namespace ROOT {
-   static TClass *RootAnalyzer_Dictionary();
-   static void RootAnalyzer_TClassManip(TClass*);
-   static void *new_RootAnalyzer(void *p = nullptr);
-   static void *newArray_RootAnalyzer(Long_t size, void *p);
-   static void delete_RootAnalyzer(void *p);
-   static void deleteArray_RootAnalyzer(void *p);
-   static void destruct_RootAnalyzer(void *p);
+   static TClass *FileHandler_Dictionary();
+   static void FileHandler_TClassManip(TClass*);
+   static void *new_FileHandler(void *p = nullptr);
+   static void *newArray_FileHandler(Long_t size, void *p);
+   static void delete_FileHandler(void *p);
+   static void deleteArray_FileHandler(void *p);
+   static void destruct_FileHandler(void *p);
 
    // Function generating the singleton type initializer
-   static TGenericClassInfo *GenerateInitInstanceLocal(const ::RootAnalyzer*)
+   static TGenericClassInfo *GenerateInitInstanceLocal(const ::FileHandler*)
    {
-      ::RootAnalyzer *ptr = nullptr;
-      static ::TVirtualIsAProxy* isa_proxy = new ::TIsAProxy(typeid(::RootAnalyzer));
+      ::FileHandler *ptr = nullptr;
+      static ::TVirtualIsAProxy* isa_proxy = new ::TIsAProxy(typeid(::FileHandler));
       static ::ROOT::TGenericClassInfo 
-         instance("RootAnalyzer", "RootAnalyzer.h", 34,
-                  typeid(::RootAnalyzer), ::ROOT::Internal::DefineBehavior(ptr, ptr),
-                  &RootAnalyzer_Dictionary, isa_proxy, 4,
-                  sizeof(::RootAnalyzer) );
-      instance.SetNew(&new_RootAnalyzer);
-      instance.SetNewArray(&newArray_RootAnalyzer);
-      instance.SetDelete(&delete_RootAnalyzer);
-      instance.SetDeleteArray(&deleteArray_RootAnalyzer);
-      instance.SetDestructor(&destruct_RootAnalyzer);
+         instance("FileHandler", "FileHandler.h", 34,
+                  typeid(::FileHandler), ::ROOT::Internal::DefineBehavior(ptr, ptr),
+                  &FileHandler_Dictionary, isa_proxy, 4,
+                  sizeof(::FileHandler) );
+      instance.SetNew(&new_FileHandler);
+      instance.SetNewArray(&newArray_FileHandler);
+      instance.SetDelete(&delete_FileHandler);
+      instance.SetDeleteArray(&deleteArray_FileHandler);
+      instance.SetDestructor(&destruct_FileHandler);
       return &instance;
    }
-   TGenericClassInfo *GenerateInitInstance(const ::RootAnalyzer*)
+   TGenericClassInfo *GenerateInitInstance(const ::FileHandler*)
    {
-      return GenerateInitInstanceLocal(static_cast<::RootAnalyzer*>(nullptr));
+      return GenerateInitInstanceLocal(static_cast<::FileHandler*>(nullptr));
    }
    // Static variable to force the class initialization
-   static ::ROOT::TGenericClassInfo *_R__UNIQUE_DICT_(Init) = GenerateInitInstanceLocal(static_cast<const ::RootAnalyzer*>(nullptr)); R__UseDummy(_R__UNIQUE_DICT_(Init));
+   static ::ROOT::TGenericClassInfo *_R__UNIQUE_DICT_(Init) = GenerateInitInstanceLocal(static_cast<const ::FileHandler*>(nullptr)); R__UseDummy(_R__UNIQUE_DICT_(Init));
 
    // Dictionary for non-ClassDef classes
-   static TClass *RootAnalyzer_Dictionary() {
-      TClass* theClass =::ROOT::GenerateInitInstanceLocal(static_cast<const ::RootAnalyzer*>(nullptr))->GetClass();
-      RootAnalyzer_TClassManip(theClass);
+   static TClass *FileHandler_Dictionary() {
+      TClass* theClass =::ROOT::GenerateInitInstanceLocal(static_cast<const ::FileHandler*>(nullptr))->GetClass();
+      FileHandler_TClassManip(theClass);
    return theClass;
    }
 
-   static void RootAnalyzer_TClassManip(TClass* ){
+   static void FileHandler_TClassManip(TClass* ){
    }
 
 } // end of namespace ROOT
 
 namespace ROOT {
    // Wrappers around operator new
-   static void *new_RootAnalyzer(void *p) {
-      return  p ? new(p) ::RootAnalyzer : new ::RootAnalyzer;
+   static void *new_FileHandler(void *p) {
+      return  p ? new(p) ::FileHandler : new ::FileHandler;
    }
-   static void *newArray_RootAnalyzer(Long_t nElements, void *p) {
-      return p ? new(p) ::RootAnalyzer[nElements] : new ::RootAnalyzer[nElements];
+   static void *newArray_FileHandler(Long_t nElements, void *p) {
+      return p ? new(p) ::FileHandler[nElements] : new ::FileHandler[nElements];
    }
    // Wrapper around operator delete
-   static void delete_RootAnalyzer(void *p) {
-      delete (static_cast<::RootAnalyzer*>(p));
+   static void delete_FileHandler(void *p) {
+      delete (static_cast<::FileHandler*>(p));
    }
-   static void deleteArray_RootAnalyzer(void *p) {
-      delete [] (static_cast<::RootAnalyzer*>(p));
+   static void deleteArray_FileHandler(void *p) {
+      delete [] (static_cast<::FileHandler*>(p));
    }
-   static void destruct_RootAnalyzer(void *p) {
-      typedef ::RootAnalyzer current_t;
+   static void destruct_FileHandler(void *p) {
+      typedef ::FileHandler current_t;
       (static_cast<current_t*>(p))->~current_t();
    }
-} // end of namespace ROOT for class ::RootAnalyzer
+} // end of namespace ROOT for class ::FileHandler
 
 namespace ROOT {
    static TClass *vectorlEstringgR_Dictionary();
@@ -239,9 +239,9 @@ namespace ROOT {
 } // end of namespace ROOT for class map<string,BranchData>
 
 namespace {
-  void TriggerDictionaryInitialization_libRootAnalyzer_Impl() {
+  void TriggerDictionaryInitialization_libFileHandler_Impl() {
     static const char* headers[] = {
-"/home/lasitha/Root_projects/root-on-vscode/Analysis_Software/include/RootAnalyzer.h",
+"/home/lasitha/Root_projects/root-on-vscode/Analysis_Software/include/FileHandler.h",
 nullptr
     };
     static const char* includePaths[] = {
@@ -253,41 +253,41 @@ nullptr
 nullptr
     };
     static const char* fwdDeclCode = R"DICTFWDDCLS(
-#line 1 "libRootAnalyzer dictionary forward declarations' payload"
+#line 1 "libFileHandler dictionary forward declarations' payload"
 #pragma clang diagnostic ignored "-Wkeyword-compat"
 #pragma clang diagnostic ignored "-Wignored-attributes"
 #pragma clang diagnostic ignored "-Wreturn-type-c-linkage"
 extern int __Cling_AutoLoading_Map;
-class __attribute__((annotate("$clingAutoload$/home/lasitha/Root_projects/root-on-vscode/Analysis_Software/include/RootAnalyzer.h")))  RootAnalyzer;
+class __attribute__((annotate("$clingAutoload$/home/lasitha/Root_projects/root-on-vscode/Analysis_Software/include/FileHandler.h")))  FileHandler;
 )DICTFWDDCLS";
     static const char* payloadCode = R"DICTPAYLOAD(
-#line 1 "libRootAnalyzer dictionary payload"
+#line 1 "libFileHandler dictionary payload"
 
 
 #define _BACKWARD_BACKWARD_WARNING_H
 // Inline headers
-#include "/home/lasitha/Root_projects/root-on-vscode/Analysis_Software/include/RootAnalyzer.h"
+#include "/home/lasitha/Root_projects/root-on-vscode/Analysis_Software/include/FileHandler.h"
 
 #undef  _BACKWARD_BACKWARD_WARNING_H
 )DICTPAYLOAD";
     static const char* classesHeaders[] = {
-"RootAnalyzer", payloadCode, "@",
+"FileHandler", payloadCode, "@",
 nullptr
 };
     static bool isInitialized = false;
     if (!isInitialized) {
-      TROOT::RegisterModule("libRootAnalyzer",
+      TROOT::RegisterModule("libFileHandler",
         headers, includePaths, payloadCode, fwdDeclCode,
-        TriggerDictionaryInitialization_libRootAnalyzer_Impl, {}, classesHeaders, /*hasCxxModule*/false);
+        TriggerDictionaryInitialization_libFileHandler_Impl, {}, classesHeaders, /*hasCxxModule*/false);
       isInitialized = true;
     }
   }
   static struct DictInit {
     DictInit() {
-      TriggerDictionaryInitialization_libRootAnalyzer_Impl();
+      TriggerDictionaryInitialization_libFileHandler_Impl();
     }
   } __TheDictionaryInitializer;
 }
-void TriggerDictionaryInitialization_libRootAnalyzer() {
-  TriggerDictionaryInitialization_libRootAnalyzer_Impl();
+void TriggerDictionaryInitialization_libFileHandler() {
+  TriggerDictionaryInitialization_libFileHandler_Impl();
 }

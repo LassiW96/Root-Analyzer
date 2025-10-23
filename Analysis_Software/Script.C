@@ -3,15 +3,15 @@
 //
 //////////////////////////////////////////////////////////////////////
 
-# include "RootAnalyzer.h"
+# include "FileHandler.h"
 
 void Script() {
-    //gSystem->Load("build/lib/libRootAnalyzer.so");
+    //gSystem->Load("build/lib/libFileHandler.so");
 
-    RootAnalyzer analyzer;
+    FileHandler analyzer;
 
     analyzer.OpenFile();
     analyzer.AccessTree();
     analyzer.SetupBranches();
-    analyzer.PromtAndPlot();
+    //analyzer.PromtAndPlot();
 }

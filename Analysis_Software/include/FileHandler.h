@@ -1,5 +1,5 @@
 //////////////////////////////////////////////////////////////////////
-// RootAnalyzer header file
+// FileHandler header file
 //
 // Functions:   - Opening a root file
 //              - Setting up branches
@@ -8,8 +8,8 @@
 //              - Plot histograms
 //////////////////////////////////////////////////////////////////////
 
-# ifndef ROOTANALYZER_H
-# define ROOTANALYZER_H
+# ifndef FILEHANDLER_H
+# define FILEHANDLER_H
 
 # include <iostream>
 # include <fstream>
@@ -31,24 +31,17 @@ struct BranchData {
     std::vector<Float_t> bufferF;   // Vector for float data
 };
 
-class RootAnalyzer {
+class FileHandler {
 public:
-    RootAnalyzer();
-    ~RootAnalyzer();
+    FileHandler();
+    ~FileHandler();
 
-    bool OpenFile();
+    bool OpenFile(std::string& filename);
+    bool AccessTree(std::string& treename);
+    bool SetupBranches(std::stringstream& ss, std::string& branchName);
 
     // Helper function to print file info
     void PrintFilecontent() const;
-
-    bool AccessTree();
-
-    bool SetupBranches();
-
-    // Waveform plotting functions
-    void PromtAndPlot();
-
-    void PromptUser();
 
 private:
     TFile* file = nullptr;
@@ -56,8 +49,6 @@ private:
     std::vector<std::string> connectedBranches;
     std::map<std::string, BranchData> branchData;
 
-    // Cannot call this outside the class, call PromptAndPlot instead
-    void PlotSamples(const std::string& branch, int nEvents);
 };
 
 # endif

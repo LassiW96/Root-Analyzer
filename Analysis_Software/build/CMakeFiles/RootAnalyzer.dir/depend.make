@@ -1,2 +1,2 @@
-# Empty dependencies file for RootAnalyzer.
+# Empty dependencies file for FileHandler.
 # This may be replaced when dependencies are built.
