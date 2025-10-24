@@ -19,7 +19,6 @@
 class AnalysisManager{
 public:
     AnalysisManager();
-    ~AnalysisManager();
 
     void Start();               // Starting point of the analyzer
     //void Exit();

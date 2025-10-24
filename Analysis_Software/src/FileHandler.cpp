@@ -31,23 +31,22 @@ FileHandler::~FileHandler() {
 /////////////////////////////////////////////////////////////////////////
 bool FileHandler::OpenFile(std::string& filename)
 {
-    while (true) {
         file = TFile::Open(filename.c_str(), "READ");    
 
         if (file && !file->IsZombie()) {
             std::cout << "\nFile " << filename << " opened successfully!" 
                       << std::endl;
             PrintFilecontent();
-            break;
+            return true;
         }
 
         else {
             std::cerr << "Error: Couldn't open the file " << filename 
                       << "\nCheck the file name" << std::endl;
+            
+            // Clear any existing file before opening again
+            return false;
         }
-    }
-
-    return true;
 }
 
 // Print file info
@@ -92,26 +91,25 @@ bool FileHandler::AccessTree(std::string& treename)
         return false;
     }
 
-    while (true) {
+    else {
         tree = dynamic_cast<TTree*>(file->Get(treename.c_str()));
 
         if (!tree) {
             std::cerr << "Error: No such tree in the file " << file->GetName() 
-                      << "\nCheck the tree name again" << std::endl;
+                        << "\nCheck the tree name again" << std::endl;
+            return false;
         }
-
         else {
             std::cout << "Tree " << treename << " opened successfully!" 
-                      << "\n=========================================\n";
-            break;
+                        << "\n=========================================\n";
+            return true;
         }
     }
-    return true;
 }
 
 // Setup branches
 /////////////////////////////////////////////////////////////////////////////
-bool FileHandler::SetupBranches(std::stringstream& ss, std::string& branchName) 
+bool FileHandler::SetupBranches(std::stringstream& ss) 
 {
     if (!tree) {
         std::cerr << "Error: No tree specified, call AccessTree() first!"
@@ -119,6 +117,7 @@ bool FileHandler::SetupBranches(std::stringstream& ss, std::string& branchName)
         return false;
     }
 
+    std::string branchName;
     // Read a line from ss
     while(std::getline(ss, branchName, ',')) {
         // Erase white spaces

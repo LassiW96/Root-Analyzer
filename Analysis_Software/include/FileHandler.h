@@ -38,7 +38,7 @@ public:
 
     bool OpenFile(std::string& filename);
     bool AccessTree(std::string& treename);
-    bool SetupBranches(std::stringstream& ss, std::string& branchName);
+    bool SetupBranches(std::stringstream& ss);
 
     // Helper function to print file info
     void PrintFilecontent() const;
