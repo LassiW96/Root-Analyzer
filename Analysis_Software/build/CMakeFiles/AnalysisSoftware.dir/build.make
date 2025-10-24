@@ -78,7 +78,7 @@ G__AnalysisSoftware.cxx: /home/lasitha/Root_projects/root-on-vscode/Analysis_Sof
 G__AnalysisSoftware.cxx: /home/lasitha/Root_projects/root-on-vscode/Analysis_Software/include/GeneratePlots.h
 G__AnalysisSoftware.cxx: /home/lasitha/Root_projects/root-on-vscode/Analysis_Software/include/LinkDef.h
 	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --blue --bold --progress-dir=/home/lasitha/Root_projects/root-on-vscode/Analysis_Software/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_1) "Generating G__AnalysisSoftware.cxx, libAnalysisSoftware_rdict.pcm, libAnalysisSoftware.rootmap"
-	/usr/bin/cmake -E env LD_LIBRARY_PATH=/home/lasitha/root/install/lib:/home/lasitha/JLab-analyzers/moller-counting-install/lib:/home/lasitha/JLab-analyzers/analyzer-1715-install/lib:/home/lasitha/root/install/lib:/home/lasitha/home/lasitha/Hall-A-analyzer/install/lib::/home/lasitha/JLab-analyzers/moller-counting-install/lib:/home/lasitha/JLab-analyzers/analyzer-1715-install/lib:/home/lasitha/root/install/lib:/home/lasitha/home/lasitha/Hall-A-analyzer/install/lib:: /home/lasitha/root/install/bin/rootcling -v2 -f G__AnalysisSoftware.cxx -s /home/lasitha/Root_projects/root-on-vscode/Analysis_Software/build/libAnalysisSoftware.so -rml libAnalysisSoftware.so -rmf /home/lasitha/Root_projects/root-on-vscode/Analysis_Software/build/libAnalysisSoftware.rootmap -compilerI/home/lasitha/home/lasitha/Hall-A-analyzer/install/include -compilerI/usr/include/c++/13 -compilerI/usr/include/x86_64-linux-gnu/c++/13 -compilerI/usr/include/c++/13/backward -compilerI/usr/lib/gcc/x86_64-linux-gnu/13/include -compilerI/usr/local/include -compilerI/usr/include/x86_64-linux-gnu -compilerI/usr/include -I/home/lasitha/root/install/include -I/home/lasitha/Root_projects/root-on-vscode/Analysis_Software/include -I/home/lasitha/Root_projects/root-on-vscode/Analysis_Software /home/lasitha/Root_projects/root-on-vscode/Analysis_Software/include/FileHandler.h /home/lasitha/Root_projects/root-on-vscode/Analysis_Software/include/AnalysisManager.h /home/lasitha/Root_projects/root-on-vscode/Analysis_Software/include/GeneratePlots.h /home/lasitha/Root_projects/root-on-vscode/Analysis_Software/include/LinkDef.h
+	/usr/bin/cmake -E env LD_LIBRARY_PATH=/home/lasitha/root/install/lib:/home/lasitha/JLab-analyzers/moller-counting-install/lib:/home/lasitha/JLab-analyzers/analyzer-1715-install/lib:/home/lasitha/root/install/lib:/home/lasitha/home/lasitha/Hall-A-analyzer/install/lib:: /home/lasitha/root/install/bin/rootcling -v2 -f G__AnalysisSoftware.cxx -s /home/lasitha/Root_projects/root-on-vscode/Analysis_Software/build/libAnalysisSoftware.so -rml libAnalysisSoftware.so -rmf /home/lasitha/Root_projects/root-on-vscode/Analysis_Software/build/libAnalysisSoftware.rootmap -compilerI/home/lasitha/home/lasitha/Hall-A-analyzer/install/include -compilerI/usr/include/c++/13 -compilerI/usr/include/x86_64-linux-gnu/c++/13 -compilerI/usr/include/c++/13/backward -compilerI/usr/lib/gcc/x86_64-linux-gnu/13/include -compilerI/usr/local/include -compilerI/usr/include/x86_64-linux-gnu -compilerI/usr/include -I/home/lasitha/root/install/include -I/home/lasitha/Root_projects/root-on-vscode/Analysis_Software/include -I/home/lasitha/Root_projects/root-on-vscode/Analysis_Software /home/lasitha/Root_projects/root-on-vscode/Analysis_Software/include/FileHandler.h /home/lasitha/Root_projects/root-on-vscode/Analysis_Software/include/AnalysisManager.h /home/lasitha/Root_projects/root-on-vscode/Analysis_Software/include/GeneratePlots.h /home/lasitha/Root_projects/root-on-vscode/Analysis_Software/include/LinkDef.h
 
 libAnalysisSoftware_rdict.pcm: G__AnalysisSoftware.cxx
 	@$(CMAKE_COMMAND) -E touch_nocreate libAnalysisSoftware_rdict.pcm
@@ -90,57 +90,57 @@ CMakeFiles/AnalysisSoftware.dir/src/FileHandler.cpp.o: CMakeFiles/AnalysisSoftwa
 CMakeFiles/AnalysisSoftware.dir/src/FileHandler.cpp.o: /home/lasitha/Root_projects/root-on-vscode/Analysis_Software/src/FileHandler.cpp
 CMakeFiles/AnalysisSoftware.dir/src/FileHandler.cpp.o: CMakeFiles/AnalysisSoftware.dir/compiler_depend.ts
 	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green --progress-dir=/home/lasitha/Root_projects/root-on-vscode/Analysis_Software/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_2) "Building CXX object CMakeFiles/AnalysisSoftware.dir/src/FileHandler.cpp.o"
-	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -MD -MT CMakeFiles/AnalysisSoftware.dir/src/FileHandler.cpp.o -MF CMakeFiles/AnalysisSoftware.dir/src/FileHandler.cpp.o.d -o CMakeFiles/AnalysisSoftware.dir/src/FileHandler.cpp.o -c /home/lasitha/Root_projects/root-on-vscode/Analysis_Software/src/FileHandler.cpp
+	/usr/bin/g++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -MD -MT CMakeFiles/AnalysisSoftware.dir/src/FileHandler.cpp.o -MF CMakeFiles/AnalysisSoftware.dir/src/FileHandler.cpp.o.d -o CMakeFiles/AnalysisSoftware.dir/src/FileHandler.cpp.o -c /home/lasitha/Root_projects/root-on-vscode/Analysis_Software/src/FileHandler.cpp
 
 CMakeFiles/AnalysisSoftware.dir/src/FileHandler.cpp.i: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green "Preprocessing CXX source to CMakeFiles/AnalysisSoftware.dir/src/FileHandler.cpp.i"
-	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E /home/lasitha/Root_projects/root-on-vscode/Analysis_Software/src/FileHandler.cpp > CMakeFiles/AnalysisSoftware.dir/src/FileHandler.cpp.i
+	/usr/bin/g++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E /home/lasitha/Root_projects/root-on-vscode/Analysis_Software/src/FileHandler.cpp > CMakeFiles/AnalysisSoftware.dir/src/FileHandler.cpp.i
 
 CMakeFiles/AnalysisSoftware.dir/src/FileHandler.cpp.s: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green "Compiling CXX source to assembly CMakeFiles/AnalysisSoftware.dir/src/FileHandler.cpp.s"
-	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /home/lasitha/Root_projects/root-on-vscode/Analysis_Software/src/FileHandler.cpp -o CMakeFiles/AnalysisSoftware.dir/src/FileHandler.cpp.s
+	/usr/bin/g++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /home/lasitha/Root_projects/root-on-vscode/Analysis_Software/src/FileHandler.cpp -o CMakeFiles/AnalysisSoftware.dir/src/FileHandler.cpp.s
 
 CMakeFiles/AnalysisSoftware.dir/src/AnalysisManager.cpp.o: CMakeFiles/AnalysisSoftware.dir/flags.make
 CMakeFiles/AnalysisSoftware.dir/src/AnalysisManager.cpp.o: /home/lasitha/Root_projects/root-on-vscode/Analysis_Software/src/AnalysisManager.cpp
 CMakeFiles/AnalysisSoftware.dir/src/AnalysisManager.cpp.o: CMakeFiles/AnalysisSoftware.dir/compiler_depend.ts
 	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green --progress-dir=/home/lasitha/Root_projects/root-on-vscode/Analysis_Software/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_3) "Building CXX object CMakeFiles/AnalysisSoftware.dir/src/AnalysisManager.cpp.o"
-	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -MD -MT CMakeFiles/AnalysisSoftware.dir/src/AnalysisManager.cpp.o -MF CMakeFiles/AnalysisSoftware.dir/src/AnalysisManager.cpp.o.d -o CMakeFiles/AnalysisSoftware.dir/src/AnalysisManager.cpp.o -c /home/lasitha/Root_projects/root-on-vscode/Analysis_Software/src/AnalysisManager.cpp
+	/usr/bin/g++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -MD -MT CMakeFiles/AnalysisSoftware.dir/src/AnalysisManager.cpp.o -MF CMakeFiles/AnalysisSoftware.dir/src/AnalysisManager.cpp.o.d -o CMakeFiles/AnalysisSoftware.dir/src/AnalysisManager.cpp.o -c /home/lasitha/Root_projects/root-on-vscode/Analysis_Software/src/AnalysisManager.cpp
 
 CMakeFiles/AnalysisSoftware.dir/src/AnalysisManager.cpp.i: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green "Preprocessing CXX source to CMakeFiles/AnalysisSoftware.dir/src/AnalysisManager.cpp.i"
-	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E /home/lasitha/Root_projects/root-on-vscode/Analysis_Software/src/AnalysisManager.cpp > CMakeFiles/AnalysisSoftware.dir/src/AnalysisManager.cpp.i
+	/usr/bin/g++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E /home/lasitha/Root_projects/root-on-vscode/Analysis_Software/src/AnalysisManager.cpp > CMakeFiles/AnalysisSoftware.dir/src/AnalysisManager.cpp.i
 
 CMakeFiles/AnalysisSoftware.dir/src/AnalysisManager.cpp.s: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green "Compiling CXX source to assembly CMakeFiles/AnalysisSoftware.dir/src/AnalysisManager.cpp.s"
-	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /home/lasitha/Root_projects/root-on-vscode/Analysis_Software/src/AnalysisManager.cpp -o CMakeFiles/AnalysisSoftware.dir/src/AnalysisManager.cpp.s
+	/usr/bin/g++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /home/lasitha/Root_projects/root-on-vscode/Analysis_Software/src/AnalysisManager.cpp -o CMakeFiles/AnalysisSoftware.dir/src/AnalysisManager.cpp.s
 
 CMakeFiles/AnalysisSoftware.dir/src/GeneratePlots.cpp.o: CMakeFiles/AnalysisSoftware.dir/flags.make
 CMakeFiles/AnalysisSoftware.dir/src/GeneratePlots.cpp.o: /home/lasitha/Root_projects/root-on-vscode/Analysis_Software/src/GeneratePlots.cpp
 CMakeFiles/AnalysisSoftware.dir/src/GeneratePlots.cpp.o: CMakeFiles/AnalysisSoftware.dir/compiler_depend.ts
 	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green --progress-dir=/home/lasitha/Root_projects/root-on-vscode/Analysis_Software/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_4) "Building CXX object CMakeFiles/AnalysisSoftware.dir/src/GeneratePlots.cpp.o"
-	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -MD -MT CMakeFiles/AnalysisSoftware.dir/src/GeneratePlots.cpp.o -MF CMakeFiles/AnalysisSoftware.dir/src/GeneratePlots.cpp.o.d -o CMakeFiles/AnalysisSoftware.dir/src/GeneratePlots.cpp.o -c /home/lasitha/Root_projects/root-on-vscode/Analysis_Software/src/GeneratePlots.cpp
+	/usr/bin/g++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -MD -MT CMakeFiles/AnalysisSoftware.dir/src/GeneratePlots.cpp.o -MF CMakeFiles/AnalysisSoftware.dir/src/GeneratePlots.cpp.o.d -o CMakeFiles/AnalysisSoftware.dir/src/GeneratePlots.cpp.o -c /home/lasitha/Root_projects/root-on-vscode/Analysis_Software/src/GeneratePlots.cpp
 
 CMakeFiles/AnalysisSoftware.dir/src/GeneratePlots.cpp.i: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green "Preprocessing CXX source to CMakeFiles/AnalysisSoftware.dir/src/GeneratePlots.cpp.i"
-	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E /home/lasitha/Root_projects/root-on-vscode/Analysis_Software/src/GeneratePlots.cpp > CMakeFiles/AnalysisSoftware.dir/src/GeneratePlots.cpp.i
+	/usr/bin/g++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E /home/lasitha/Root_projects/root-on-vscode/Analysis_Software/src/GeneratePlots.cpp > CMakeFiles/AnalysisSoftware.dir/src/GeneratePlots.cpp.i
 
 CMakeFiles/AnalysisSoftware.dir/src/GeneratePlots.cpp.s: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green "Compiling CXX source to assembly CMakeFiles/AnalysisSoftware.dir/src/GeneratePlots.cpp.s"
-	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /home/lasitha/Root_projects/root-on-vscode/Analysis_Software/src/GeneratePlots.cpp -o CMakeFiles/AnalysisSoftware.dir/src/GeneratePlots.cpp.s
+	/usr/bin/g++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /home/lasitha/Root_projects/root-on-vscode/Analysis_Software/src/GeneratePlots.cpp -o CMakeFiles/AnalysisSoftware.dir/src/GeneratePlots.cpp.s
 
 CMakeFiles/AnalysisSoftware.dir/G__AnalysisSoftware.cxx.o: CMakeFiles/AnalysisSoftware.dir/flags.make
 CMakeFiles/AnalysisSoftware.dir/G__AnalysisSoftware.cxx.o: G__AnalysisSoftware.cxx
 CMakeFiles/AnalysisSoftware.dir/G__AnalysisSoftware.cxx.o: CMakeFiles/AnalysisSoftware.dir/compiler_depend.ts
 	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green --progress-dir=/home/lasitha/Root_projects/root-on-vscode/Analysis_Software/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_5) "Building CXX object CMakeFiles/AnalysisSoftware.dir/G__AnalysisSoftware.cxx.o"
-	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -MD -MT CMakeFiles/AnalysisSoftware.dir/G__AnalysisSoftware.cxx.o -MF CMakeFiles/AnalysisSoftware.dir/G__AnalysisSoftware.cxx.o.d -o CMakeFiles/AnalysisSoftware.dir/G__AnalysisSoftware.cxx.o -c /home/lasitha/Root_projects/root-on-vscode/Analysis_Software/build/G__AnalysisSoftware.cxx
+	/usr/bin/g++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -MD -MT CMakeFiles/AnalysisSoftware.dir/G__AnalysisSoftware.cxx.o -MF CMakeFiles/AnalysisSoftware.dir/G__AnalysisSoftware.cxx.o.d -o CMakeFiles/AnalysisSoftware.dir/G__AnalysisSoftware.cxx.o -c /home/lasitha/Root_projects/root-on-vscode/Analysis_Software/build/G__AnalysisSoftware.cxx
 
 CMakeFiles/AnalysisSoftware.dir/G__AnalysisSoftware.cxx.i: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green "Preprocessing CXX source to CMakeFiles/AnalysisSoftware.dir/G__AnalysisSoftware.cxx.i"
-	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E /home/lasitha/Root_projects/root-on-vscode/Analysis_Software/build/G__AnalysisSoftware.cxx > CMakeFiles/AnalysisSoftware.dir/G__AnalysisSoftware.cxx.i
+	/usr/bin/g++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E /home/lasitha/Root_projects/root-on-vscode/Analysis_Software/build/G__AnalysisSoftware.cxx > CMakeFiles/AnalysisSoftware.dir/G__AnalysisSoftware.cxx.i
 
 CMakeFiles/AnalysisSoftware.dir/G__AnalysisSoftware.cxx.s: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green "Compiling CXX source to assembly CMakeFiles/AnalysisSoftware.dir/G__AnalysisSoftware.cxx.s"
-	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /home/lasitha/Root_projects/root-on-vscode/Analysis_Software/build/G__AnalysisSoftware.cxx -o CMakeFiles/AnalysisSoftware.dir/G__AnalysisSoftware.cxx.s
+	/usr/bin/g++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /home/lasitha/Root_projects/root-on-vscode/Analysis_Software/build/G__AnalysisSoftware.cxx -o CMakeFiles/AnalysisSoftware.dir/G__AnalysisSoftware.cxx.s
 
 # Object files for target AnalysisSoftware
 AnalysisSoftware_OBJECTS = \

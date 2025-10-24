@@ -1,0 +1,69 @@
+{
+	"configurations" : 
+	[
+		{
+			"directories" : 
+			[
+				{
+					"build" : ".",
+					"jsonFile" : "directory-.-Debug-f5ebdc15457944623624.json",
+					"minimumCMakeVersion" : 
+					{
+						"string" : "3.10"
+					},
+					"projectIndex" : 0,
+					"source" : ".",
+					"targetIndexes" : 
+					[
+						0,
+						1
+					]
+				}
+			],
+			"name" : "Debug",
+			"projects" : 
+			[
+				{
+					"directoryIndexes" : 
+					[
+						0
+					],
+					"name" : "AnalysisSoftware",
+					"targetIndexes" : 
+					[
+						0,
+						1
+					]
+				}
+			],
+			"targets" : 
+			[
+				{
+					"directoryIndex" : 0,
+					"id" : "AnalysisSoftware::@6890427a1f51a3e7e1df",
+					"jsonFile" : "target-AnalysisSoftware-Debug-49e484bcf8720d5a6bbd.json",
+					"name" : "AnalysisSoftware",
+					"projectIndex" : 0
+				},
+				{
+					"directoryIndex" : 0,
+					"id" : "G__AnalysisSoftware::@6890427a1f51a3e7e1df",
+					"jsonFile" : "target-G__AnalysisSoftware-Debug-a2239b0cb2aa9ca9db62.json",
+					"name" : "G__AnalysisSoftware",
+					"projectIndex" : 0
+				}
+			]
+		}
+	],
+	"kind" : "codemodel",
+	"paths" : 
+	{
+		"build" : "/home/lasitha/Root_projects/root-on-vscode/Analysis_Software/build",
+		"source" : "/home/lasitha/Root_projects/root-on-vscode/Analysis_Software"
+	},
+	"version" : 
+	{
+		"major" : 2,
+		"minor" : 6
+	}
+}

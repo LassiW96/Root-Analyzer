@@ -1,0 +1,26 @@
+[
+{
+  "directory": "/home/lasitha/Root_projects/root-on-vscode/Analysis_Software/build",
+  "command": "/usr/bin/g++ -DAnalysisSoftware_EXPORTS -I/home/lasitha/root/install/include -I/home/lasitha/Root_projects/root-on-vscode/Analysis_Software/include   -pipe -fsigned-char -pthread -g -std=gnu++17 -fPIC -o CMakeFiles/AnalysisSoftware.dir/src/FileHandler.cpp.o -c /home/lasitha/Root_projects/root-on-vscode/Analysis_Software/src/FileHandler.cpp",
+  "file": "/home/lasitha/Root_projects/root-on-vscode/Analysis_Software/src/FileHandler.cpp",
+  "output": "CMakeFiles/AnalysisSoftware.dir/src/FileHandler.cpp.o"
+},
+{
+  "directory": "/home/lasitha/Root_projects/root-on-vscode/Analysis_Software/build",
+  "command": "/usr/bin/g++ -DAnalysisSoftware_EXPORTS -I/home/lasitha/root/install/include -I/home/lasitha/Root_projects/root-on-vscode/Analysis_Software/include   -pipe -fsigned-char -pthread -g -std=gnu++17 -fPIC -o CMakeFiles/AnalysisSoftware.dir/src/AnalysisManager.cpp.o -c /home/lasitha/Root_projects/root-on-vscode/Analysis_Software/src/AnalysisManager.cpp",
+  "file": "/home/lasitha/Root_projects/root-on-vscode/Analysis_Software/src/AnalysisManager.cpp",
+  "output": "CMakeFiles/AnalysisSoftware.dir/src/AnalysisManager.cpp.o"
+},
+{
+  "directory": "/home/lasitha/Root_projects/root-on-vscode/Analysis_Software/build",
+  "command": "/usr/bin/g++ -DAnalysisSoftware_EXPORTS -I/home/lasitha/root/install/include -I/home/lasitha/Root_projects/root-on-vscode/Analysis_Software/include   -pipe -fsigned-char -pthread -g -std=gnu++17 -fPIC -o CMakeFiles/AnalysisSoftware.dir/src/GeneratePlots.cpp.o -c /home/lasitha/Root_projects/root-on-vscode/Analysis_Software/src/GeneratePlots.cpp",
+  "file": "/home/lasitha/Root_projects/root-on-vscode/Analysis_Software/src/GeneratePlots.cpp",
+  "output": "CMakeFiles/AnalysisSoftware.dir/src/GeneratePlots.cpp.o"
+},
+{
+  "directory": "/home/lasitha/Root_projects/root-on-vscode/Analysis_Software/build",
+  "command": "/usr/bin/g++ -DAnalysisSoftware_EXPORTS -I/home/lasitha/root/install/include -I/home/lasitha/Root_projects/root-on-vscode/Analysis_Software/include   -pipe -fsigned-char -pthread -g -std=gnu++17 -fPIC -o CMakeFiles/AnalysisSoftware.dir/G__AnalysisSoftware.cxx.o -c /home/lasitha/Root_projects/root-on-vscode/Analysis_Software/build/G__AnalysisSoftware.cxx",
+  "file": "/home/lasitha/Root_projects/root-on-vscode/Analysis_Software/build/G__AnalysisSoftware.cxx",
+  "output": "CMakeFiles/AnalysisSoftware.dir/G__AnalysisSoftware.cxx.o"
+}
+]
