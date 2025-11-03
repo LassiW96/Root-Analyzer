@@ -37,19 +37,15 @@ void AnalysisManager::Start()
 void AnalysisManager::WelcomeHeader() const
 {
     std::cout << "===========================================\n";
-    std::cout << "=========== Root file analyzer ============\n\n";
-    std::cout << "===== Following functions are served ======\n";
-    std::cout << " 1. Printing a data summary.\n";
-    std::cout << " 2. Waveforms.\n";
-    std::cout << " 3. Pulse height spectrum.\n";
-    std::cout << " 4. Timing destribution.\n";
+    std::cout << "======== Root file analyzer v1.0 ==========\n\n";
+    std::cout << "================ Welcome! =================\n";
     std::cout << "===========================================\n";
 }
 
 std::string AnalysisManager::PromptFilename() const
 {
     std::string filename;
-    std::cout << "Enter the filename: ";
+    std::cout << "Enter the filename with the path: ";
     std::getline(std::cin, filename);
 
     if (filename.empty()) {
@@ -66,7 +62,7 @@ void AnalysisManager::BranchSetup()
 {
     while (true) {
         std::string treename;
-        std::cout << "\nEnter the tree name to load:";
+        std::cout << "\nEnter the tree name to load: ";
         std::cin >> treename;
     
         treeOpen = analyzer->AccessTree(treename);
@@ -87,7 +83,7 @@ void AnalysisManager::BranchSetup()
                 }
 
                 else {
-                    std::cout << "\nCouldn't open that branch! Try anin\n";
+                    std::cout << "\nCouldn't open that branch! Try again.\n";
                 }
             }
             break;
@@ -103,17 +99,24 @@ void AnalysisManager::BranchSetup()
 //////////////////////////////////////////////////////////////////////////////
 void AnalysisManager::PromptUser()
 {
+    std::cout << "==== Following options are available ======\n";
+    std::cout << " 1. Waveforms.\n";
+    std::cout << " 2. Pulse height spectrum.\n";
+    std::cout << " 3. Timing destribution.\n";
+    std::cout << " 4. Open a different tree.\n\n";
+    std::cout << " 5. Exit.\n";
+    std::cout << "===========================================\n";
+
     Int_t choice = 0;
 
     while (true) {
-        std::cout << "\nEnter the choice of analysis from the above list."
-                  << "Type 5 to exit.";
+        std::cout << "\nEnter the choice from the above list: ";
         std::cin >> choice;
 
         if (std::cin.fail()) {
             std::cin.clear();
             std::cin.ignore(256, ',');
-            std::cerr << "\nInvalid input. Please enter a number between 1 & 5!\n";
+            std::cerr << "\nInvalid input. Please enter a number between 1 & 6!\n";
             continue;
         }
 

@@ -23,9 +23,26 @@ void GeneratePlots::PlotWaveForms(const std::string& branch, int nEvents)
         }
 
         TGraph *graph1 = new TGraph();
-        for (int j = 0; j < arr.ndata; j++) {
-            graph1->SetPoint(graph1->GetN(), j, arr.bufferD[j]);
-        }    
+
+        if (arr.type == "double") {
+            for (int j = 0; j < arr.ndata; j++) {
+                graph1->SetPoint(graph1->GetN(), j, arr.bufferD[j]);
+            }
+        }
+        else if (arr.type == "float") {
+            for (int j = 0; j < arr.ndata; j++) {
+                graph1->SetPoint(graph1->GetN(), j, arr.bufferF[j]);
+            }
+        }
+        else if (arr.type == "int") {
+            for (int j = 0; j < arr.ndata; j++) {
+                graph1->SetPoint(graph1->GetN(), j, arr.bufferI[j]);
+            }
+        }
+        else {
+            std::cerr << "Error: Invalid data type!\n";
+            return;
+        }   
 
         // Drawing
         TCanvas *c = new TCanvas(Form("c%d", i), Form("Event%i", i), 800, 600);

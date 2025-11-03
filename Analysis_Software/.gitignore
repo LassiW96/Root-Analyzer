@@ -1,0 +1,4 @@
+Extra_Scripts/
+build/
+*.so
+*.root

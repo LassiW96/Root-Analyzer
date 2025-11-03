@@ -59,7 +59,7 @@ namespace ROOT {
       ::FileHandler *ptr = nullptr;
       static ::TVirtualIsAProxy* isa_proxy = new ::TIsAProxy(typeid(::FileHandler));
       static ::ROOT::TGenericClassInfo 
-         instance("FileHandler", "FileHandler.h", 34,
+         instance("FileHandler", "FileHandler.h", 35,
                   typeid(::FileHandler), ::ROOT::Internal::DefineBehavior(ptr, ptr),
                   &FileHandler_Dictionary, isa_proxy, 4,
                   sizeof(::FileHandler) );

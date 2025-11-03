@@ -131,11 +131,16 @@ bool FileHandler::SetupBranches(std::stringstream& ss)
         TBranch* brData = tree->GetBranch(branchName.c_str());
         TBranch* brCount = tree->GetBranch(branchCount.c_str());
 
-        if (!brData || !brCount) {
-            std::cerr << "Warning: Couldn't find Ndata for "
+        if (!brData) {
+            std::cerr << "Warning: Couldn't find data for "
                       << branchName << std::endl;
             continue;
             
+        }
+
+        if (!brCount) {
+            std::cerr << "Warning: Couldn't find an Ndata branch for "
+                      << branchName << "; Opening as a normal branch.\n";
         }
 
         // Get branch data type from the leaf
@@ -150,10 +155,10 @@ bool FileHandler::SetupBranches(std::stringstream& ss)
         // Setup arrays for that branch
         BranchData arr;
         arr.name = branchName;
-        arr.count = branchCount;
+        if (brCount) arr.count = branchCount;
 
         // Get the count branch first to determine the data type first
-        tree->SetBranchAddress(arr.count.c_str(), &arr.ndata);
+        if (brCount) tree->SetBranchAddress(arr.count.c_str(), &arr.ndata);
 
         if (leafType == "Double_t") {
             arr.type = "double";
@@ -166,6 +171,13 @@ bool FileHandler::SetupBranches(std::stringstream& ss)
             arr.type = "float";
             arr.bufferF.resize(5000);
             tree->SetBranchAddress(arr.name.c_str(), arr.bufferF.data());
+            std::cout << "\nBuffer name: " << arr.name.c_str() << std::endl;
+        }
+
+        else if (leafType == "Int_t") {
+            arr.type = "int";
+            arr.bufferI.resize(5000);
+            tree->SetBranchAddress(arr.name.c_str(), arr.bufferI.data());
             std::cout << "\nBuffer name: " << arr.name.c_str() << std::endl;
         }
 
@@ -186,7 +198,7 @@ bool FileHandler::SetupBranches(std::stringstream& ss)
         for (auto it = branchData.begin(); it != branchData.end(); ++it) {
             std::cout << "Branch: " << it->first << std::endl;
             std::cout << "  Type: " << it->second.type << std::endl;
-            std::cout << "  Ndata: " << it->second.ndata << std::endl;
+            if (brCount) std::cout << "  Ndata: " << it->second.ndata << std::endl;
 
             if (!it->second.bufferD.empty()) {
                 std::cout << "  First few doubles: ";
@@ -201,14 +213,22 @@ bool FileHandler::SetupBranches(std::stringstream& ss)
                     std::cout << it->second.bufferF[i] << " ";
                 std::cout << std::endl;
             }
+
+            if (!it->second.bufferI.empty()) {
+                std::cout << "  First few integers: ";
+                for (size_t i = 0; i < std::min<size_t>(5, it->second.bufferI.size()); ++i)
+                    std::cout << it->second.bufferI[i] << " ";
+                std::cout << std::endl;
+            }
         }
 
-
         std::cout << "Connected: " << branchName
-                  << " (" << arr.type << ", Ndata = " << arr.count << ")\n";
+                  << " (" << arr.type << ")\n";
+        if (brCount) std::cout << "Ndata " << arr.ndata << std::endl;
     }
 
     std::cout << "===============================================\n" 
               << std::endl;
     return true;
 }
+

@@ -29,6 +29,7 @@ struct BranchData {
 
     std::vector<Double_t> bufferD;  // Vector for double data
     std::vector<Float_t> bufferF;   // Vector for float data
+    std::vector<Int_t> bufferI;     // Vector for integer data
 };
 
 class FileHandler {
